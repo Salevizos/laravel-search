@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+// use Illuminate\Support\Facades\Input;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,10 +16,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('search');
 });
-Route::get('/posts', function () {
-    return view('posts');
-    
+// Route::get('/posts', function () {
+//     return view('posts');
+// });
+Route::post('/search', function() {
+    // $q = Request::input('q');
+    // dd($q);
+});
+Route::post('/searchresults', function () {
+    return view('searchresults');
 
 });
+
